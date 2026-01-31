@@ -1,0 +1,30 @@
+#title_box {
+  background-color: rgb(50, 50, 50);
+  width: 280px;
+  height: 720px;
+  display: flex;
+  border-right: 2px solid rgb(172, 155, 158);
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+#title_box .up {
+  display: flex;
+  align-items: center;
+  color: rgb(172, 155, 158);
+  font-style: italic;
+  font-weight: bold;
+  font-size: 30pt;
+  line-height: 50px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+#title_box .down {
+  display: flex;
+  font-size: 10pt;
+  align-items: flex-end;
+  color: rgb(172, 155, 158);
+  line-height: 16px;
+  margin-bottom: 20px;
+  text-align: center;
+}/*# sourceMappingURL=title_box.css.map */

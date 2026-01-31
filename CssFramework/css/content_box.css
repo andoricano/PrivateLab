@@ -1,0 +1,65 @@
+#content_box {
+  display: flex;
+  width: 100%;
+  min-height: 600px;
+  flex-wrap: wrap;
+  background-color: rgb(50, 50, 50);
+}
+#content_box > a {
+  display: flex;
+  flex-wrap: wrap;
+  width: 250px;
+}
+#content_box .numbering_box {
+  width: 250px;
+  height: 600px;
+  padding: 70px 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  color: lightgray;
+  opacity: 0.4;
+  background-image: url("../rsc/back.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: -250px center;
+  transition: background-position 0.5s ease;
+}
+#content_box .numbering_box > .number {
+  margin-left: 0;
+  font-size: 30pt;
+  font-weight: 900;
+  border-bottom: 2px solid lightgray;
+  margin-bottom: 20px;
+}
+#content_box .numbering_box > .content_text {
+  height: 250px;
+}
+#content_box .numbering_box > .content_text > p:first-of-type {
+  margin: 20px auto;
+  background-color: transparent;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 1000;
+}
+#content_box .numbering_box > .content_text > p:not(:first-of-type) {
+  margin: 40;
+  background-color: transparent;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+}
+#content_box .numbering_box img {
+  width: 100%;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+  transform-origin: left bottom;
+}
+#content_box .numbering_box:hover {
+  opacity: 1;
+  background-position: 0px center;
+}
+#content_box .numbering_box:hover img {
+  transform: scale(1.15);
+  transition: transform 0.5s ease;
+}/*# sourceMappingURL=content_box.css.map */
