@@ -1,0 +1,6 @@
+.DS_Store
+# 의존성 폴더 제외
+node_modules/
+
+npm-debug.log*
+.DS_Store
