@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Tailwind -->
+
+<head>
+    <meta charset="UTF-8">
+    <title>Portfoilo</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-900 antialiased">
+
+
+    <header class="bg-sky-200/70 backdrop-blur-md text-sky-900">
+
+        <!-- 최대 가로폭 72rem, mx는 margin x축의 줄임말. 나머지는 예상대로 padding x, y축과 flex 속성들 -->
+        <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <h1 class="text-xl font-bold text-sky-800">
+                CSS Framework
+            </h1>
+
+            <!-- 1gap 당 4px. , sm = 14px -->
+            <ul class="flex gap-6 text-sm font-medium">
+                <li>
+                    <a href="./index.html" class="hover:text-sky-600 transition-colors">
+                        Bootstrap
+                    </a>
+                </li>
+                <li>
+                    <a href="#Tailwind" class="hover:text-sky-600 transition-colors">
+                        Tailwind
+                    </a>
+                </li>
+                <li>
+                    <a href="#Framework" class="hover:text-sky-600 transition-colors">
+                        CSS Framework
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="profile">
+            <h2>Profile</h2>
+            <div class="profile-container">
+                <div class="profile-item">
+                    <div>name: Ando Choi</div>
+                    <div>job: Full stack engineer</div>
+                    <div>age: 30</div>
+                    <div>Edu: Recode</div>
+                </div>
+        </section>
+
+        <hr>
+
+        <section id="links">
+            <h2>Links</h2>
+            <div class="link-group">
+                <a href="#">GitHub</a>
+                <a href="#">Notion</a>
+                <a href="#">Blog</a>
+            </div>
+        </section>
+    </main>
+
+    <footer id="career">
+        <hr>
+        <h2>Career</h2>
+        <article>
+            <h3>Huinsystec</h3>
+            <p>2023.12 - 2025.12</p>
+            <ul>
+                <li>Android SI: SDK, NDK, BLE, BT</li>
+                <li>Microchip Builder: Arduino</li>
+            </ul>
+        </article>
+    </footer>
+
+</body>
+
+</html>
