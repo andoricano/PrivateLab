@@ -2,6 +2,7 @@
 <html lang="en">
 
 <!-- Bootstrap -->
+
 <head>
     <meta charset="UTF-8">
     <title>Css Framework Test</title>
@@ -11,14 +12,47 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#Bootstrap">Bootstrap</a></li>
-                <li><a href="#Tailwind">Tailwind</a></li>
-                <li><a href="#Framework">CSS Framework</a></li>
-            </ul>
+<body class="bg-light" style="color: #075985;">
+
+    <!-- 일반적으로 Bootstrap에서 navigation엔 sticky-top을 사용하여 스크롤에 대응 -->
+    <!-- Sticky top is Position an element at the top of the viewport, from edge to edge, but only after you scroll past it. -->
+    <header class="sticky-top" style="background-color: rgba(186, 230, 253, 0.7);">
+
+
+        <!-- navbar를 사용할 때 사용하라고 권장하는 navbar-expand-size, light는 브라우저 테마에 대응 색상 적용-->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <!--  
+             Bootstrap Framework은 Section(Component Group)으로 구분됨.
+             Section은 다음과 같이 있음 : Layout, content, form, component, helper
+            여기서 container는 layout에 속함.
+             -->
+
+             <!-- navbar가 flex-wrap이라서 내용이 많아지면 줄바꿈이 일어남 이걸 방지하기 위한 norwap-->
+            <div class="container flex-nowrap">
+                <!-- navbar-brand : 이름처럼 brand logo를 쓸 때 사용, fontsize, fontweight, margin bottom-->
+                <h1 class="navbar-brand fs-5 fw-bold mb-0" style="color: #0c4a6e;">
+                    CSS Framework : Bootstrap
+                </h1>
+
+                <ul class="navbar-nav ms-auto flex-row gap-4">
+                    <li class="nav-item">
+                        <a href="./index.html" class="nav-link fw-medium p-0 active"
+                            style="font-size: 0.875rem;">Bootstrap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./tailwind.html" class="nav-link fw-medium p-0" style="font-size: 0.875rem;">Tailwind</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./test/bootstrap-test.html" class="nav-link fw-medium p-0" style="font-size: 0.875rem;">Bootstrap
+                            Framework</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="./test/tailwind-test.html" class="nav-link fw-medium p-0" style="font-size: 0.875rem;">Tailwind
+                            Framework</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
 
