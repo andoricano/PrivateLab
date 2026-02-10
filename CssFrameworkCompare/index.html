@@ -60,8 +60,8 @@
     </header>
 
     <main>
-        <section class="container py-5">
-            <div class="mx-auto" style="max-width: 896px;">
+        <section class="container py-5"  style="max-width: 896px;">
+            <div class="mx-auto">
 
                 <!-- card 관련 component들은 대부분 배치 혹은 여백에 대한 기능을 수행함-->
                 <div class="card rounded-4"
@@ -109,14 +109,18 @@
             </div>
         </section>
 
-        <hr>
-
-        <section id="links">
-            <h2>Links</h2>
-            <div class="link-group">
-                <a href="#">GitHub</a>
-                <a href="#">Notion</a>
-                <a href="#">Blog</a>
+        <section class="container mx-auto pb-5" style="max-width: 896px;">
+            <div class="card rounded-4 border-info "
+                style="color: #075985;">
+                <div class="card-body p-4">
+                    <p class="fs-5 fw-bold mb-4">My Links</p>
+                    <div class="d-flex gap-4 align-items-start" style="min-width: 500px;">
+                        <div class="d-flex gap-3 align-items-center">
+                            <a href="#"><img src="./github.png" alt="GitHub" style="max-height: 50px;"></a>
+                            <a href="#"><img src="./notion.png" alt="Notion" style="max-height: 50px;"></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
