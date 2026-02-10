@@ -44,29 +44,35 @@
     </header>
 
     <main>
+
+
         <section>
             <div class="max-w-4xl my-10 mx-auto border border-sky-300 rounded-xl bg-white/80 p-10">
-                <div class="text-lg font-semibold mb-4">Test List</div>
+                <div class="text-lg font-semibold mb-6">Test List</div>
 
-                <div class="grid grid-cols-[auto_1fr_auto] gap-x-8 items-center">
+                <div class="grid grid-cols-[200px_1fr_200px] gap-x-8 items-center w-full">
 
                     <div class="text-xs text-gray-500 pb-2">Test Name</div>
                     <div class="text-xs text-gray-500 pb-2">Summary</div>
-                    <div class="text-xs text-gray-500 pb-2 px-2">Date</div>
+                    <div class="text-xs text-gray-500 pb-2">Date</div>
 
-                    <div class="font-medium py-4">bootstrap-test</div>
-                    <div class="font-medium py-4 text-gray-700">Bootstrap에 대한 성능 테스트</div>
-                    <div class="font-medium py-4 px-2 text-gray-600 whitespace-nowrap">2026.02.03 - 2026.02.11</div>
+                    <a href="./test/bootstrap-test.html"
+                        class="col-span-full grid grid-cols-[200px_1fr_200px] gap-x-8 items-center py-3     hover:bg-black/5 transition-colors rounded-lg">
+                        <div class="font-medium">bootstrap-test</div>
+                        <div class="font-medium text-gray-700">Bootstrap에 대한 성능 테스트</div>
+                        <div class="font-medium text-gray-600 whitespace-nowrap">2026.02.03 - 2026.02.11</div>
+                    </a>
 
-                    <div class="col-span-full border-b border-sky-100"></div>
+                    <div class="col-span-full border-b border-sky-100 my-1"></div>
 
-                    <div class="font-medium py-4">tailwind-test</div>
-                    <div class="font-medium py-4 text-gray-700">Tailwind에 대한 성능 테스트</div>
-                    <div class="font-medium py-4 px-2 text-gray-600 whitespace-nowrap">2026.02.03 - 2026.02.11</div>
-
+                    <a href="./test/tailwind-test.html"
+                        class="col-span-full grid grid-cols-[200px_1fr_200px] gap-x-8 items-center py-3    hover:bg-black/5 transition-colors rounded-lg">
+                        <div class="font-medium">tailwind-test</div>
+                        <div class="font-medium text-gray-700">Tailwind에 대한 성능 테스트</div>
+                        <div class="font-medium text-gray-600 whitespace-nowrap">2026.02.03 - 2026.02.11</div>
+                    </a>
                 </div>
             </div>
-
         </section>
 
     </main>
