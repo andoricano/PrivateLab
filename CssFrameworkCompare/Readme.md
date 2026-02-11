@@ -22,8 +22,11 @@
 3. 링크
 4. 경력
 
-### 테스트 페이지
-1. 버튼
-2. 결과창
+### 정리 페이지
+1. Framework Specific
+2. Navigation Bar
+3. Card
+4. Button
+5. Performence
 
 ## 결과
