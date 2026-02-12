@@ -1,16 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bootstrap test</title>
-    
+
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </head>
+
 <body>
-    
+    <div class="container py-5" style="max-width: 896px;">
+        <h1>1. Framework Specific</h1>
+        <p>
+            Bootstrap은 디자인 및 레이아웃을 덩어리로 쓸 수 있는 CSS Framework이다.
+            다음과 같은 기존의 CSS 버튼이 있다고 하자.
+        </p>
+        <div class="w-100 d-flex gap-2">
+            <div class="border d-inline-block p-2 my-2 w-75">
+                <p>코드</p>
+                <textarea class="mb-3col-md-10 form-control font-monospace" id="codeEditor" rows="3"
+                    style="background-color: #f8f9fa;">
+<button>버튼</button>
+                </textarea>
+            </div>
+            <div class="border d-inline-block p-2 my-2 w-25">
+                <p>결과</p>
+                <button>버튼</button>
+            </div>
+        </div>
+
+
+        <p>
+            투박하기도 하고 클릭이 되는 것을 겨우 확인할 수 있다.
+            그래서 이를 상용 서비스에서 쓰기엔 유저도 나도 기분이 좋지 않을 것이다.
+            이를 위해 CSS코드를 구성해야 하나 매번 프로젝트 만들 때 마다 버튼을 만드는 것도 관리하는 것도 비효율적이다.
+            이럴 때 사용하는 것이 CSS Framework이고 가장 편하다고 여겨지는 것이 Bootstrap이다.
+            다음의 버튼은 위 버튼에 class="btn btn-success"만 추가한 버튼이다.
+        </p>
+
+
+        <div class="w-100 d-flex gap-2">
+            <div class="border d-inline-block p-2 my-2 w-75">
+                <p>코드</p>
+                <textarea class="mb-3col-md-10 form-control font-monospace" id="codeEditor" rows="5"
+                    style="background-color: #f8f9fa;">
+<button class="btn btn-success">버튼</button>
+<button type="button" class="btn btn-outline-danger">버튼</button>
+                </textarea>
+            </div>
+            <div class="border d-inline-block p-2 my-2 w-25">
+                <p>결과</p>
+                <button class="btn btn-success">버튼</button>
+                <button type="button" class="btn btn-outline-danger">버튼</button>
+            </div>
+        </div>
+        <p>
+            요즘 UX 가이드에 맞는 라운딩 모서리를 가진 색상 버튼을 볼 수 있다.
+            outline을 하면 배경색이 없고, outline을 넣지 않는다면 테두리만 있다가 마우스를 올리면 색이 채워진다.
+        </p>
+
+        <p>
+            다음과 같이 기능적인 요소랑 섞어쓸 수 있는 디자인도 제공해준다.
+            사용할 수 없는 것 처럼 보이게 하는 연한 색 버튼이다.
+        </p>
+        <div class="w-100 d-flex gap-2">
+            <div class="border d-inline-block p-2 my-2 w-75">
+                <p>코드</p>
+                <textarea class="mb-3col-md-10 form-control font-monospace" id="codeEditor" rows="9"
+                    style="background-color: #f8f9fa;">
+<a href="#" class="btn btn-primary disabled" tabindex="-1" role="button" aria-disabled="true">
+    Primarylink
+</a>
+<a href="#" class="btn btn-secondary disabled" tabindex="-1" role="button" aria-disabled="true">
+    Link
+</a>
+                </textarea>
+            </div>
+            <div class="border d-inline-block p-2 my-2 w-25">
+                <p>결과</p>
+
+                <a href="#" class="btn btn-primary disabled" tabindex="-1" role="button" aria-disabled="true">Primary
+                    link</a>
+                <a href="#" class="btn btn-secondary disabled" tabindex="-1" role="button" aria-disabled="true">Link</a>
+
+            </div>
+        </div>
+
+        <p>
+            그러면 Bootstrap은 어떤 식으로 사용을 하며 관리를 해야할까?
+            그냥 단순하게 class만 나열하다보면 정작 구조가 잘 보이는 HTML 장점이 무마되어 유지보수가 어려울 것이다.
+            위에서 봤을 때 class를 다중으로 선언해서 하나의 스타일을 만들어내는 것을 확인할 수 있다.
+            Bootstrap에 있는 class를 면밀한 수준은 아니더라도 어떤 구조로 되어있는지 이해한다면 웬만한 UI를 만들 수 있다고 생각한다.
+        </p>
+
+        <h1>2. Bootstrap Module</h1>
+        <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/"><img class="w-50 my-3"
+                src="../rsc/bootstrap-intro.png"></a>
+        <p>
+            Side Navigation을 살펴보면 Introduction, Customize, Layout등이 있는데 이를 Section 혹은 Category 라고 칭하는 것 같다.
+            Framework를 전반적으로 구성하는 것을 보면 Module이 가장 어울리는 것 같아서 Module이라고 하겠다.
+            여기서 Layout, Utilities, Component 이 세가지가 가장 중요하다고 한다.
+            Layout과 Component는 당연히 중요해 보이나 Utilities는 왜 중요하다고 할까? Utilities 내부를 간단하게 살펴 보자.
+        </p>
+
+        <div class="w-100 d-flex gap-2">
+            <div class="border d-inline-block p-2 my-2 w-75">
+                <p>코드</p>
+                <textarea class="mb-3col-md-10 form-control font-monospace" id="codeEditor" rows="15"
+                    style="background-color: #f8f9fa;">
+.mx-auto {
+margin-right: auto !important;
+margin-left: auto !important;
+}
+
+.my-0 {
+margin-top: 0 !important;
+margin-bottom: 0 !important;
+}
+
+.my-1 {
+margin-top: 0.25rem !important;
+margin-bottom: 0.25rem !important;
+}
+
+.my-2 {
+margin-top: 0.5rem !important;
+margin-bottom: 0.5rem !important;
+}
+
+.my-3 {
+margin-top: 1rem !important;
+margin-bottom: 1rem !important;
+}
+                </textarea>
+            </div>
+            <div class="border d-inline-block p-2 my-2 w-25">
+                <p>결과</p>
+            </div>
+        </div>
+
+        <p>
+            우리가 흔히 쓰는 상하에 대한 margin 속성을 설정하고 있다.
+            즉 margin, padding, opacity, round 등 필수적이진 않으나 빈번하게 사용되는 속성들을 모아둔 모듈이다.
+            다음으로 Layout에 대해 살펴 보자. Layout의 가장 중요한 기능 중 하나는 Container라고 생각한다.
+            요즘 같은 세상엔 제각각인 해상도에 최적의 UI를 주기 위한 반응형 레이아웃이 필수이다.
+            container는 이를 구현한 모듈이다. 아래는 이를 가장 잘 보여주는 코드 일부이다.
+        </p>
+
+        <div class="w-100 d-flex gap-2">
+            <div class="border d-inline-block p-2 my-2 w-75">
+                <p>코드</p>
+                <textarea class="mb-3col-md-10 form-control font-monospace" id="codeEditor" rows="9"
+                    style="background-color: #f8f9fa;">
+.container,
+.container-fluid,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+}
+                </textarea>
+            </div>
+            <div class="border d-inline-block p-2 my-2 w-25">
+                <p>결과</p>
+            </div>
+        </div>
+        <p>
+            해당 코드는 아래에서 media라는 쿼리문으로 padding과 margin을 부모 엘리먼트의 width에 맞춰 조절한다고 한다.
+            그러나 이는 수치 설정에 대한 문제가 확실하게 있다.
+            예를 들어 width가 1000인 container가 4분할 되어야 한다면 당연히 250으로 쪼개지겠으나, width가 시시각각 변한다면 250으로 쪼갤 수 없다.
+            솔직히 그냥 Flex라고 보면 된다. 이때 Flex를 쓰지 않는 이유는 CSS를 최소화하자는 Bootstrap의 의지인 듯 하다.
+        </p>
+        <p>
+            마지막으로 Component에 대해 살펴보자.
+            Bootstrap에 대해 조사할 때, 혹은 GPT에게 물어봤을 때 항상 Component를 제공해주는 Framework라고 소개한다.
+            처음엔 그런 줄 알았으나 위에 기술했듯이 Component단위가 아닌 Module(기능) 단위로 제공해주고 있고, Component는 그 Module 중 하나이다.
+            그렇다면 왜 Component를 제공해준다는 정보가 많았을까?
+            그 이유는 2가지이다. 첫쨰는 Component가 대부분이고 둘째는 WEB에서 Component라는 단위가 통용되었기 때문이다.
+            Bootstrap이 제공하는 Component는 직관적이다.
+            위에서 봤던 Button도 그렇고 앞선 페이지에서 사용했던 Card, Navbar 등이 그것이다.
+            다음은 Portfolio로 만들었던 Navbar 코드이다.
+        </p>
+
+        <div class="w-100 d-flex gap-2">
+            <div class="border d-inline-block p-2 my-2 w-100">
+                <p>코드</p>
+                <textarea class="mb-3col-md-10 form-control font-monospace" id="codeEditor" rows="19"
+                    style="background-color: #f8f9fa;">
+<header class="sticky-top" style="background-color: rgba(186, 230, 253, 0.7);">
+
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container flex-nowrap">
+            <h1 class="navbar-brand fs-5 fw-bold mb-0" style="color: #0c4a6e;">
+                CSS Framework : Bootstrap
+            </h1>
+
+            <ul class="navbar-nav ms-auto flex-row gap-4">
+                <li class="nav-item">
+                    <a href="./index.html" class="nav-link fw-medium p-0 active"
+                        style="font-size: 0.875rem;">Bootstrap</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./tailwind.html" class="nav-link fw-medium p-0"
+                        style="font-size: 0.875rem;">Tailwind</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./test.html" class="nav-link fw-medium p-0"
+                        style="font-size: 0.875rem;">Test History</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+                </textarea>
+            </div>
+        </div>
+
+        <p>
+            현대에서 많이 쓰이는 패턴으로 Component로 지원한다.
+            예를 들어 Navbar 클래스를 선언하면 수평 배치, 적절한 padding 자동 적용, li 디자인 제거 등의 style이 적용된다.
+            여기에 Logo로 사용될 건 알아서 좌정렬되어 일반적인 로고 위치에 배치된다. 
+            우리가 일반적으로 보던 디자인들이 해당 프레임워크에서 구현된 것이고 우리는 이걸 그대로 가져와서 일반적인 디자인을 쉽게 구현할 수 있다.
+        </p>
+        <h1>마무리</h1>
+        <p>
+            위의 내용에 거의 장점만 있어서 장점은 하나만 말하고 단점으로 마무리하도록 하겠다.
+            장점으로 커스터마이징을 해도 성능 이슈가 만들어도 거의 없다는 것이다.
+            현재 폴더에는 없으나 부트스트랩은 바로 scss로 구현되어 있다.
+            <a href="https://github.com/twbs/bootstrap/tree/main/scss">bootstrap.scss.git</a>
+        </p>
+
+
+    </div>
+
 </body>
+
 </html>

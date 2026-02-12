@@ -23,10 +23,5 @@
 4. 경력
 
 ### 정리 페이지
-1. Framework Specific
-2. Navigation Bar
-3. Card
-4. Button
-5. Performence
-
-## 결과
+1. [Bootstrap-test](./test/bootstrap-test.html)
+2. [Tailwind-test](./test/tailwind-test.html)
