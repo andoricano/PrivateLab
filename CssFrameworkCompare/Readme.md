@@ -16,12 +16,15 @@
     1. 메인 페이지
     2. 성능 테스트 페이지
 
-### 메인 페이지
+## 메인 페이지
+1. [Bootstrap](./index.html)
+2. [Tailwind](./tailwind.html)
+### 메인 페이지 구성 요소
 1. 네비게이션 바 구성
 2. 프로필 표
 3. 링크
 4. 경력
 
-### 정리 페이지
+## 정리 페이지
 1. [Bootstrap-test](./test/bootstrap-test.html)
 2. [Tailwind-test](./test/tailwind-test.html)
