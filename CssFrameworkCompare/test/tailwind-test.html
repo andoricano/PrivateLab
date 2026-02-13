@@ -9,13 +9,165 @@
 
 </head>
 
-<body>
-    <div class="flex min-h-screen items-center justify-center bg-gray-100">
-        <button class="rounded-lg bg-blue-500 px-6 py-2 font-bold text-white hover:bg-blue-600 transition">
-            Tailwind 버튼
-        </button>
+<body class="bg-gray-50 antialiased">
+    <header class="sticky top-0 z-50 bg-sky-200/70 backdrop-blur-md text-sky-900">
+
+        <nav class="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
+            <h1 class="text-xl font-bold">
+                CSS Framework : Tailwind
+            </h1>
+
+            <ul class="flex gap-6 text-sm font-medium">
+                <li>
+                    <a href="./../index.html" class="hover:text-sky-600 transition-colors">
+                        Bootstrap
+                    </a>
+                </li>
+                <li>
+                    <a href="./../tailwind.html" class="hover:text-sky-600 transition-colors">
+                        Tailwind
+                    </a>
+                </li>
+                <li>
+                    <a href="./../history.html" class="hover:text-sky-600 transition-colors">
+                        Test History
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="backdrop-blur-md max-w-4xl mx-auto mb-10 p-4">
+        <h1 class="text-2xl font-bold my-4">1. Tailwind란</h1>
 
 
+        Tailwind는 CSS Framework이다. 기존에 높은 점유율의 Bootstrap을 이겨서 현재 가장 압도적이라는 평을 받고 있다.
+        높은 점유율을 차지할 수 있었던 이유는 Framework 속에서 높은 자유도이다.
+        기존에 비교적 강자였던 Bootstrap은 직접 소스를 개조하지 않는다면 CSS 코드를 필수적으로 직접 구성해야 하는 단점이 있다.
+        이와 다르게 Tailwind는 CSS 코드를 사용하지 않더라도 Tailwind 코드만으로도 거의 모든 상황에 대비할 수 있도록 구성되었기에 Tailwind 프레임워크 내에서 자유도가 뛰어난 편이다.
+
+        <h1 class="text-2xl font-bold my-4">2. 사용 방식</h1>
+        <p>
+            CSS Framework를 조사하면서 CDN 방식을 주로 이용했으나 NPM과 로컬 파일로 다운로드 하는 형식이 있다는 것을 확인하게 되었다.
+            일반적으로 이 세 가지 방식은 거의 유사하다고 볼 수 있다.
+            기본적인 원칙은 모든 프레임워크를 개발할 때 사용할 수 있되 내가 필요한 것만 빌드한다는 점이다.
+            사실상 라이브러리를 여러개 사용해도 내가 사용하는 것만을 빌드하는 개발과 유사하다.
+            더 중요한 건 WEB 개발에서 사용하는 거의 모든 프레임워크, 라이브러리 등이 위와 같은 형식으로 진행되는 것으로 보인다.
+            그래서 이를 Tailwind를 통해 정리를 해두면 후에 다른 개발 도구를 접했을 때 똑같이 접근하면 러닝 커브를 줄일 수 있을 것이기 때문에 정리하고자 한다.
+        </p>
+        <ol class="list-decimal ml-5">
+            <li class="font-bold py-1">Local 방식</li>
+            <p>
+                exe 파일을 이용해서 내가 사용할 class들을 빌드하여 css 파일을 만드는 것이다.
+                tailwind.exe 안에는 추출기라는 엔진이 포함되어 있다.
+                exe를 다음과 같이 html 경로를 넣은 명령어를 시행하면 알아서 css 파일이 빌드된다.
+            <p>./tailwind.exe -i input.css -o style.css --watch</p>
+            명령어도 그렇고 명칭도 그렇게 scss와 굉장히 유사한 점을 확인할 수 있고 사실상 HTML class에 대한 컴파일러나 마찬가지라고 볼 수 있다.
+            </p>
+            <li class="font-bold py-1">NPM 방식</li>
+            <p>
+                NPM으로 Tailwind로 관리하는 방식은 사실상 로컬과 똑같다.
+                NPM installer를 통해서 tailwind를 다운로드 받고, 내 프로젝트에 설치하고 위 명령어가 포함된 npm run dev 같은 명령어로 실행하면 된다.
+                그러면 굳이 Tailwind와 NPM을 쓰는 이유는 뭘까?
+                보통 웹 개발에서 React가 자주 쓰이는데 이 거대한 라이브러리에 대한 관리 툴이 NPM에 최적화 및 편의성이 좋기 때문이다.
+                이러한 이유때문에 React+Tailwind 조합이 꽤 있다고 한다.
+            </p>
+            <li class="font-bold py-1">CDN 방식</li>
+            <p>
+                이번 프로젝트에서 Tailwind는 모두 CDN 방식으로 진행했으나 현업에서 사용하기엔 부적합한 방식이다.
+                왜냐하면 웹 페이지에 접근할 때마다 선언된 class들을 Tailwind JS code가 읽어서 해당 코드를 서버에서 받아오는 방식이기 때문이다.
+                성능을 위해 내가 선언한 class만 가져오는 것은 굉장히 합리적이나, 결국 부피가 커진다면 페이지 렌더링 속도와 웹 브라우저의 메모리 한계가 나빠질 것이 분명하다.
+                물론 가장 간편한 방식이기도 하다.
+            </p>
+
+        </ol>
+        <h1 class="text-2xl font-bold my-4">3. 예제</h1>
+        <p>
+            다음은 현재 페이지의 네비게이션 바 코드이다.
+
+
+        </p>
+
+        <div class="max-w-4xl mx-auto w-full p-4">
+            <textarea rows="28" class="w-full max-w-4xl p-4 border border-gray-300 rounded-lg" readonly>
+<header class="sticky top-0 z-50 bg-sky-200/70 backdrop-blur-md text-sky-900">
+
+    <nav class="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
+        <h1 class="text-xl font-bold">
+            CSS Framework : Tailwind
+        </h1>
+
+        <ul class="flex gap-6 text-sm font-medium">
+            <li>
+                <a href="./../index.html" class="hover:text-sky-600 transition-colors">
+                    Bootstrap
+                </a>
+            </li>
+            <li>
+                <a href="./../tailwind.html" class="hover:text-sky-600 transition-colors">
+                    Tailwind
+                </a>
+            </li>
+            <li>
+                <a href="./../history.html" class="hover:text-sky-600 transition-colors">
+                    Test History
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+            </textarea>
+        </div>
+
+        <p>
+            간단한 코드로 작성했음을 확인할 수 있다.
+            다만 Bootstrap과 똑같이 규모가 커진다면 필연적으로 html 구조가 굉장히 나빠진다.
+            여기서 Bootstrap과 Tailwind의 대책은 판이했고 이 대책 덕에 개인적으로 Tailwind가 점유율을 늘릴 수 있었다고 본다.
+            Bootstrap은 Framework의 Component를 수정하는 방식으로 즉 CSS를 덮는 방식을 제시했고,
+            Tailwind는 빌드라는 과정을 통해 나만의 Component CSS 파일을 만들수 있었다.
+            Tailwind에서 제공한 방식을 다음 코드에서 살펴보자.
+        </p>
+
+        <div class="max-w-4xl mx-auto w-full p-4">
+            <textarea rows="3" class="w-full max-w-4xl p-4 border border-gray-300 rounded-lg" readonly>
+<h1 class="text-2xl font-bold my-4">1. Tailwind란</h1>
+<h1 class="text-2xl font-bold my-4">2. 사용 방식</h1>
+<h1 class="text-2xl font-bold my-4">3. 예제</h1>
+<h1 class="text-2xl font-bold my-4">4. 마무리</h1></textarea>
+        </div>
+        <p>
+            class가 3개 밖에 없으나 해당 클래스들은 h1 뿐만 아니라 모든 div에 들어간다.
+            즉 공통 분모인 셈이다.
+            해당 코드가 항상 3개라면 좋겠으나 공통분모가 10개, 20개일 수도 있는 법이다.
+            부모 element에서 부터 잘 설계를 하더라도 border, padding, hover 등은 결국 해당 element에서 조절을 해야한다.
+            이를 다음과 같이 대응할 수 있다.
+        </p>
+
+        <div class="max-w-4xl mx-auto w-full p-4">
+            <textarea rows="8" class="w-full max-w-4xl p-4 border border-gray-300 rounded-lg" readonly>
+//CSS
+.main-title {
+  @apply text-2xl font-bold my-4;
+}
+
+<!-- 해당 코드를 html에서 다음과 같이 적용. -->
+<h1 class="main-title">1. Tailwind란</h1>
+</textarea>
+        </div>
+        <p>
+            즉 Tailwind에서 미리 만들어 준 스타일을 잘 만들어서 나만의 디자인 컴포넌트를 만들어서 사용하면 Bootstrap의 단점을 해결할 수 있다.
+        </p>
+        <h1 class="text-2xl font-bold my-4">4. 마무리</h1>
+        <p>
+            장점이 있다면 단점도 있는 법이다.
+            위 방식을 효율적으로 사용하려면 CSS 숙련도는 기본으로 하고 Tailwind에 대한 숙련도가 굉장히 높아야 한다.
+            줄이고 줄이다 보면 html class에 apply class가 또 여러개 들어갈 수 있는데 이에 대한 문제를 비숙련자가 할 수 있을까?
+            숙련도 문제 뿐만 html에서 보기 어려워서 추상화한 apply class를 여러개 더 섞어 놓으면 가독성이 더 나빠질 것이다.
+            그래서 커뮤니티를 살펴보면 CSS를 기반으로 하고 Tailwind로 보조하는 방식을 많이 추천하는 듯 하다.
+            다만 React와 합쳐지게 된다면 Tailwind의 단점이 거의 사라진다고 한다.
+            GPT도 똑같이 React+Tailwind를 필수적으로 다룰줄은 알아야 한다고 한다.
+            아직은 React를 사용해본 적이 없기 때문에 어떤 점이 좋을지는 모르겠다.
+            아마 추후에 React를 제대로 사용하게 된다면 Tailwind를 더 자세하게 다루지 않을까 싶다.
+        </p>
     </div>
 </body>
 
