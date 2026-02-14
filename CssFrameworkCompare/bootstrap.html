@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Bootstrap -->
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CssFrameworkCompare/css/bootstrap.min.css">
+</head>
+
+<body class="bg-light" style="color: #075985;">
+
+    <!-- 일반적으로 Bootstrap에서 navigation엔 sticky-top을 사용하여 스크롤에 대응 -->
+    <!-- Sticky top is Position an element at the top of the viewport, from edge to edge, but only after you scroll past it. -->
+    <header class="sticky-top" style="background-color: rgba(186, 230, 253, 0.7);">
+
+
+        <!-- navbar를 사용할 때 사용하라고 권장하는 navbar-expand-size, light는 브라우저 테마에 대응 색상 적용-->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <!--  
+             Bootstrap Framework은 Section(Component Group)으로 구분됨.
+             Section은 다음과 같이 있음 : Layout, content, form, component, helper
+            여기서 container는 layout에 속함.
+             -->
+
+            <!-- navbar가 flex-wrap이라서 내용이 많아지면 줄바꿈이 일어남 이걸 방지하기 위한 norwap-->
+            <div class="container flex-nowrap">
+                <!-- navbar-brand : 이름처럼 brand logo를 쓸 때 사용, fontsize, fontweight, margin bottom-->
+                <h1 class="navbar-brand fs-5 fw-bold mb-0" style="color: #0c4a6e;">
+                    CSS Framework : Bootstrap
+                </h1>
+
+                <ul class="navbar-nav ms-auto flex-row gap-4">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link fw-medium p-0 active"
+                            style="font-size: 0.875rem;">Bootstrap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./CssFrameworkCompare/tailwind.html" class="nav-link fw-medium p-0"
+                            style="font-size: 0.875rem;">Tailwind</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./CssFrameworkCompare/history.html" class="nav-link fw-medium p-0"
+                            style="font-size: 0.875rem;">Test History</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container py-5" style="max-width: 896px;">
+            <div>
+
+                <!-- card 관련 component들은 대부분 배치 혹은 여백에 대한 기능을 수행함-->
+                <div class="card rounded-4"
+                    style="background-color: rgba(255, 255, 255, 0.8); border-color: #7dd3fc; color: #075985;">
+
+                    <div class="card-body p-4">
+
+                        <h5 class="card-title fw-bold">Profile Info</h5>
+
+                        <!-- 표 부분은 GPT만 사용 -->
+                        <div class="d-flex flex-column flex-sm-row gap-4 align-items-start" style="min-width: 500px;">
+                            <img src="./CssFrameworkCompare/rsc/profile.jpg" class="rounded-3 border border-info"
+                                style="width: 8rem; height: 8rem;">
+
+                            <div class="container-fluid p-0">
+                                <div class="row g-0 mb-2">
+                                    <!-- Bootstrap의 표는 기본적으로 12등분 사이즈로 계산됨 col-2인 경의 1/6을 사용하겠다는 의미 -->
+                                    <div class="col-2 fw-medium">Name</div>
+                                    <!-- col-auto 내용물 크기만큼-->
+                                    <div class="col-auto border-start mx-3"></div>
+                                    <!-- 남음 부분 모두 -->
+                                    <div class="col">Ando Choi</div>
+                                </div>
+                                <div class="row g-0 mb-2">
+                                    <div class="col-2 fw-medium">Job</div>
+                                    <div class="col-auto border-start mx-3"></div>
+                                    <div class="col">Full stack engineer</div>
+                                </div>
+                                <div class="row g-0 mb-2">
+                                    <div class="col-2 fw-medium">Age</div>
+                                    <div class="col-auto border-start mx-3"></div>
+                                    <div class="col">30</div>
+                                </div>
+                                <div class="row g-0 mb-2">
+                                    <div class="col-2 fw-medium">Edu</div>
+                                    <div class="col-auto border-start mx-3"></div>
+                                    <div class="col">Recode</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="container pb-5" style="max-width: 896px;">
+            <div class="card rounded-4 border-info " style="color: #075985;">
+                <div class="card-body p-4">
+                    <p class="fs-5 fw-bold mb-4">My Links</p>
+                    <div class="d-flex gap-4 align-items-start" style="min-width: 500px;">
+                        <div class="d-flex gap-3 align-items-center">
+                            <a href="#"><img src="./CssFrameworkCompare/rsc/github.png" alt="GitHub" style="max-height: 50px;"></a>
+                            <a href="#"><img src="./CssFrameworkCompare/rsc/notion.png" alt="Notion" style="max-height: 50px;"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="container pb-5" style="max-width: 896px;">
+            <div class="mx-auto">
+
+                <div class="card rounded-4 border-info"
+                    style="background-color: rgba(255, 255, 255, 0.8); color: #075985;">
+
+                    
+                        <!-- 표 부분은 GPT만 사용 -->
+                    <div class="card-body p-4">
+                        <h5 class="fs-5 fw-bold mb-4">Career</h5>
+
+                        <div class="row g-0 align-items-center w-100 flex-nowrap">
+
+                            <div class="col-auto d-flex flex-column">
+                                <span class="small text-secondary" style="font-size: 0.75rem;">Company</span>
+                                <span class="fw-medium">Huinsystec</span>
+                            </div>
+
+                            <div class="col-auto px-4">
+                                <div class="bg-info-subtle" style="width: 1px; height: 2rem;"></div>
+                            </div>
+
+                            <div class="col-auto d-flex flex-column">
+                                <span class="small text-secondary" style="font-size: 0.75rem;">Work Experience</span>
+                                <span class="fw-medium">Android SI: SDK, NDK</span>
+                            </div>
+
+                            <div class="col-auto px-4">
+                                <div class="bg-info-subtle" style="width: 1px; height: 2rem;"></div>
+                            </div>
+
+                            <div class="col-auto d-flex flex-column">
+                                <span class="small text-secondary" style="font-size: 0.75rem;">Sub Experience</span>
+                                <span class="fw-medium">Microchip: Arduino Builder</span>
+                            </div>
+
+                            <div class="col-auto px-4">
+                                <div class="bg-info-subtle" style="width: 1px; height: 2rem;"></div>
+                            </div>
+
+                            <div class="col-auto d-flex flex-column">
+                                <span class="small text-secondary" style="font-size: 0.75rem;">Date</span>
+                                <span class="fw-medium text-nowrap">2023.12 - 2025.12</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+
+</html>
